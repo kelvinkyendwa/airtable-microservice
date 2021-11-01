@@ -8,6 +8,7 @@ app.use(bodyParser.json());
 app.use(cors());
 require('dotenv').config()
 
+const records = [];
 app.post('/airtable/user-signups', (req, res) => {
     const {email, name, country} = req.body;
     const config = {
