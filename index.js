@@ -64,7 +64,7 @@ app.post("/airtable/premium", (req, res) => {
 		.then((r) => console.log("successful data transfer", r.data));
 	res.status(201).send("successful data transfer");
 });
-
-app.listen(4000, () => {
-	console.log("server listening on 4000");
+const PORT = 4000;
+app.listen(PORT, () => {
+	console.log("server listening on `${PORT}`");
 });
